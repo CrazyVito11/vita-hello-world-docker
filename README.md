@@ -19,15 +19,21 @@ An `.env.example` file has been provided, so you only have to make a copy of it 
 Store the environment file as `.env`, this way it should be picked up by our container later on.
 
 ### Fill in the `.env` file
-Now that you have an environment file, we can enter our Vita console's IP address so we can transfer it later on and where to transfer the VPK to.
+Now that you have an environment file, we can enter information about our Vita console and the project.
 
 > [!TIP]
 > It's recommended that you assign a static IP address to your Vita console.
 
 ### Install the Vita Companion plugin
-To use the `build-and-test-app.sh` script, your Vita also needs to have the [Vita Companion plugin](https://github.com/devnoname120/vitacompanion) installed.
+To use the `build-and-test-app.sh` script, your Vita also needs to have the [Vita Companion plugin](https://github.com/Ibrahim778/vitacompanion) installed.
 
 Simply follow the steps on their GitHub page.
+
+> [!NOTE]
+> This is a fork of [devnoname120's Vita Companion](https://github.com/devnoname120/vitacompanion) that also allows installing VPK files remotely.
+
+> [!TIP]
+> Don't forget to also enable the "CMD/FTP Servers" option in the quick start menu, as otherwise you won't be able to connect to your Vita.
 
 ### Start the container
 We should now be ready to start the container!

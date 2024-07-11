@@ -5,7 +5,7 @@ WORKDIR /setup
 
 # Update the Debian image
 RUN apt update && apt upgrade --yes
-RUN apt install curl wget make cmake git python3 sudo bzip2 xz-utils --yes
+RUN apt install curl wget make cmake git python3 sudo bzip2 xz-utils netcat-traditional --yes
 
 ENV VITASDK=/usr/local/vitasdk
 
