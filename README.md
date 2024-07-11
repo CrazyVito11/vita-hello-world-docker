@@ -11,15 +11,15 @@ This repository contains the Hello World C++ example from VitaSDK as a proof of 
 ## Setup
 To get started with this example, simply follow these steps.
 
-### Copy the example `.env` file
-We first want to create the environment file that we will then use inside the container.
+### Copy the example `vita.env` file
+We first want to create the environment file that we will then use inside the container, this file contains information about your Vita console.
 
-An `.env.example` file has been provided, so you only have to make a copy of it and fill it in.
+An `vita.env.example` file has been provided, so you only have to make a copy of it and fill it in.
 
-Store the environment file as `.env`, this way it should be picked up by our container later on.
+Store the environment file as `vita.env`, this way it should be picked up by our container later on.
 
-### Fill in the `.env` file
-Now that you have an environment file, we can enter information about our Vita console and the project.
+### Fill in the `vita.env` file
+Now that you have an Vita environment file, we can enter information about our Vita console.
 
 > [!TIP]
 > It's recommended that you assign a static IP address to your Vita console.

@@ -8,4 +8,6 @@ services:
     volumes:
       - ./project:/project:cached
     network_mode: host # Used so Vita Companion can actually connect to your Vita
-    env_file: ".env"
+    env_file:
+      - ./vita.env
+      - ./project.env
