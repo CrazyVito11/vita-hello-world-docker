@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  builder:
+    build:
+      context: ./docker
+      dockerfile: "./Dockerfile"
+    volumes:
+      - ./project:/project:cached
+    network_mode: host # Used so Vita Companion can actually connect to your Vita
+    env_file: ".env"
