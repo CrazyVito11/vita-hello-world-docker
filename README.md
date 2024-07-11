@@ -43,6 +43,24 @@ You can start it using `docker compose up -d`, it should automatically build the
 > [!TIP]
 > If you need to rebuild the image, you can add `--build` at the end of the command.
 
+### Create `Intellisense-src` directory (Recommended)
+While this step is optional, it is highly recommended to make the development experience a lot easier.
+
+> [!NOTE]
+> In this example we will be using VS Code, but this likely will also work for other IDE's.
+
+First, install the "C/C++" extension from Microsoft.
+This can be installed by pressing CTRL + P, and then running `ext install ms-vscode.cpptools`.
+
+> [!TIP]
+> If you can't find the extension, you might be running an unofficial build of VS Code that doesn't have Microsoft extensions.
+>
+> You can install the extension manually by downloading the [.vsix file straight from Microsoft's website](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools).
+
+Once you have the extension installed, simply run `./configure-intellisense.sh` in a terminal on your host to copy the relevant files to your host machine.
+
+Your editor should now be able to find the sources and provide you with proper Intellisense.
+
 
 
 ## Building + Testing
