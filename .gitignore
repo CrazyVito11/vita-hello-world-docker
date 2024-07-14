@@ -1,3 +1,4 @@
 project/build
+crashdumps/*.psp2dmp
 intellisense-src
 vita.env

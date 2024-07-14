@@ -70,5 +70,28 @@ You should now be inside the `/src` directory, in which is the source code of ou
 
 If you only want to compile the application, simply run `./build-app.sh` to receive the application in vpk form, which you can then copy to the Vita manually.
 
+> [!NOTE]
+> `./build-app.sh` builds the application as a Release candidate, meaning it will have better performance.
+
+
 If you also want to transfer it to your Vita console over the network with Vita Companion, run `./build-and-test-app.sh` instead.
 This should automatically transfer, install and run the application.
+
+> [!WARNING]
+> Running the `build-and-test-app.sh` script will close all running applications on the Vita, so keep that in mind.
+
+> [!NOTE]
+> `build-and-test-app.sh` builds the application as a Debug release, meaning it has worse performance but with better debug information.
+
+## Debugging
+If your application crashes, you can use the `vita-parse-core.sh` script to parse the crash dump and get more information about what went wrong.
+
+First, copy the crash dump file from your Vita and store it in the `crashdumps` directory.
+
+> [!TIP]
+> If you have multiple crash dumps at `ux0:data/`, check the Vita error screen, as it should show the filename of the current crash.
+
+Once you have copied the crash dump file over to your machine, once again enter the builder container.
+Inside the container run the following command: `vita-parse-core.sh /crashdumps/<YOUR_CRASH_DUMP_FILE>.psp2dmp build/<YOUR_PROJECT_TECHNICAL_NAME>`
+
+Here is an example: `vita-parse-core.sh /crashdumps/psp2core-1720985303-0x0002492929-eboot.bin.psp2dmp build/hello_cpp_world`
